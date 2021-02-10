@@ -2,12 +2,15 @@
 Different sorting methods
 
 # Bubble Sort
+# Create the variables
 j = 0
 k = 99
 
+# Create the list of numbers going to be sorted
 list1 = r.sample(range(0, 1001), 100)
 print(list1)
 
+# Sort the numbers using two while loops
 while k > 0:
     j = 0
     while j < k:
@@ -18,6 +21,5 @@ while k > 0:
         j = j + 1
     k = k - 1
 
+# Print out the sorted numbers
 print(list1)
-
-
