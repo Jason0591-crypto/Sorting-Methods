@@ -1,0 +1,31 @@
+# Import the random module
+import random as r
+
+# Generate the numbers going to be sorted and create the variables
+list2 = r.sample(range(0, 1001), 100)
+max_value = list2[0]
+max_index = 0
+k = len(list2) - 1
+
+# Sorting the numbers
+while k > 0:
+    j = 0
+    max_value = list2[0]
+    max_index = 0
+    # Checking the size of the values of the numbers
+    while j <= k:
+        if list2[j] > max_value:
+            max_value = list2[j]
+            max_index = j
+        j = j + 1
+    # Switching the largest number with the last number in the list (not counting the ones already sorted)
+    temp_value = list2[k]
+    list2[max_index] = temp_value
+    list2[k] = max_value
+    list2[max_index] = temp_value
+    # Subtracting one from k, indicating that the loop had been ran once, and one number was sorted
+    k = k - 1
+
+# Printing out the sorted numbers
+print("max value:", max_value, "\n", "max index:", max_index)
+print(list2)
